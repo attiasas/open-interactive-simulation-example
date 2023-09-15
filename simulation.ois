@@ -1,7 +1,8 @@
 {
   "title" : "OIS Simulation",
-  "initialState" : "Green",
+  "initialState" : "3D",
   "states" : {
+    "3D" : "org.attias.open.interactive.simulation.example.State3D",
     "Blue" : "org.attias.open.interactive.simulation.example.BlueState",
     "Red" : "org.attias.open.interactive.simulation.example.RedState",
     "Green" : "org.attias.open.interactive.simulation.example.GreenState"
