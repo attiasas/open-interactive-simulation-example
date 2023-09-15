@@ -1,2 +1,7 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+    }
+}
 rootProject.name = 'open-interactive-simulation-example'
 
