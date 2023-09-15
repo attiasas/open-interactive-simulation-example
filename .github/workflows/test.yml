@@ -43,7 +43,9 @@ jobs:
 
       # Run tests
       - name: Tests on macOS, Linux
-        run: ./gradlew clean check
+        run: |
+          chmod 755 gradlew
+          ./gradlew clean check
         if: runner.os != 'Windows'
       - name: Tests on Windows
         run: ./gradlew.bat clean check
