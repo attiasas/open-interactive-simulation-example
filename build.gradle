@@ -1,5 +1,16 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        google()
+    }
+}
+
 plugins {
     id 'java'
+    id 'org.attias.open.interactive.simulation.deployer' version '1.0-SNAPSHOT'
 }
 
 group 'org.attias.open.interactive.simulation'
@@ -7,9 +18,21 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    mavenLocal()
+}
+
+ext {
+    gdxVersion = '1.10.0'
+    gdxControllersVersion = '2.1.0'
+    coreVersion = '0.1'
 }
 
 dependencies {
+    implementation "org.attias.open.interactive.simulation:open-interactive-simulation-core:$coreVersion"
+    implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
+    implementation "com.badlogicgames.gdx-controllers:gdx-controllers-core:$gdxControllersVersion"
+    implementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }

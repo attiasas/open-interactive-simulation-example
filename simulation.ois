@@ -1,0 +1,15 @@
+{
+  "title" : "OIS Simulation",
+  "initialState" : "Green",
+  "states" : {
+    "Blue" : "org.attias.open.interactive.simulation.example.BlueState",
+    "Red" : "org.attias.open.interactive.simulation.example.RedState",
+    "Green" : "org.attias.open.interactive.simulation.example.GreenState"
+  },
+  "publish" : {
+    "publishedName" : "MyTest",
+    "platforms" : [ "Desktop", "Android " ],
+    "iconsDir" : "C:\\Users\\Assaf Attias\\code\\OpenInteractiveSimulation\\simulation-example\\src\\main\\resources",
+    "generateMissingIcons" : true
+  }
+}
